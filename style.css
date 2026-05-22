@@ -387,6 +387,13 @@ footer {
 .fade-up-delay-5 { transition-delay: 0.5s !important; }
 /* ── Mobile Responsive ── */
 @media (max-width: 768px) {
+  .hero-actions {
+    justify-content: center !important;
+  }
+
+  #hero .flex.gap-6 {
+    justify-content: center !important;
+  }
 /* Projects */
   #projects {
     padding: 3rem 1.5rem !important;
