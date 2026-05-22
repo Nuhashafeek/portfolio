@@ -406,8 +406,16 @@ footer {
     gap: 2rem;
   }
 
+  #hero > div {
+    align-items: center !important;
+    width: 100% !important;
+  }
+
   .hero-content {
-    width: 100%;
+    width: 100% !important;
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
   .tagline {
@@ -417,6 +425,7 @@ footer {
   /* Stats row */
   #hero .flex {
     justify-content: center !important;
+    width: 100% !important;
   }
 
   /* Buttons */
@@ -424,6 +433,7 @@ footer {
     display: flex !important;
     justify-content: center !important;
     flex-wrap: wrap !important;
+    width: 100% !important;
   }
 
   /* Frame */
