@@ -16,30 +16,7 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeElements.forEach(el => observer.observe(el));
 
-// ── Nav link click — trigger animations ──
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    const target = link.getAttribute('href');
-    const section = document.querySelector(target);
-    if (!section) return;
 
-    // Reset fade-up elements inside that section
-    section.querySelectorAll('.fade-up').forEach(el => {
-      el.classList.remove('visible');
-      setTimeout(() => {
-        el.classList.add('visible');
-      }, 300);
-    });
-
-    // Also reset if the section itself has fade-up
-    if (section.classList.contains('fade-up')) {
-      section.classList.remove('visible');
-      setTimeout(() => {
-        section.classList.add('visible');
-      }, 300);
-    }
-  });
-});
 // ── Hamburger Menu ──
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
