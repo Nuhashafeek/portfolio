@@ -5,9 +5,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-    } else {
-      // Reset when out of view so it replays
-      entry.target.classList.remove('visible');
+      observer.unobserve(entry.target);
     }
   });
 }, {
